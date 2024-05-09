@@ -7,10 +7,10 @@
   vars_prompt:
   - name: WISHES
     prompt: Please enter Wishes
-    private: false
+    Hprivate: false
   tasks:
   - name: check preference
-     vars:
+    vars:
        WISHES: "Morning from TASK variable"
     ansible.builtin.debug:
       msg: "Hello, Good {{WISHES}}"
