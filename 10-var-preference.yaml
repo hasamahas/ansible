@@ -7,7 +7,7 @@
   vars_prompt:
   - name: WISHES
     prompt: Please enter Wishes
-    Hprivate: false
+    private: false
   tasks:
   - name: check preference
     vars:
