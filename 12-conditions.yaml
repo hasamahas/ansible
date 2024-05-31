@@ -1,0 +1,11 @@
+- name: conditons
+  hosts: web
+  become: yes
+  tasks:
+  - name: check the user exists or not
+    ansible.builtin.command: id expense
+    register: USER
+    ignore_errors: true
+  - name: say hello
+    ansible.builtin.debug:
+      msg: "Hello"
