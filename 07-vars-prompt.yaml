@@ -9,5 +9,5 @@
       private: true
   tasks:
   - name: print iformation
-  ansible.builtin.debug:
+    ansible.builtin.debug:
     msg: "Hi Usernmae {{USERNAME}} and Password is {{PASSWORD}}"
