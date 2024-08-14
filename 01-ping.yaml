@@ -1,5 +1,5 @@
 - name: ping the server from ansible to remote server
-  hosts: db
+  hosts: web
   tasks: # a list of task/module/collections
   - name: ping the server
     ansible.builtin.ping:
