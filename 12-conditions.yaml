@@ -1,20 +1,20 @@
 - name: conditons
-  hosts: web
+  hosts: localhost
   become: yes
   tasks:
 
   - name: check the user exists or not
     ansible.builtin.command: id expense
-    register: USER
-    ignore_errors: true
+    register: USER   # to read the data and store in the variable
+    ignore_errors: true  # to ignore the errors
 
   - name: print user info
     ansible.builtin.debug:
       msg: "user login error logs {{USER}}"
 
-  - name: creare user
+  - name: create user
     ansible.builtin.command: useradd expense
-    when: USER.rc != 0 #condition
+    when: USER.rc != 0 #condition  checkin  condition in anisble to check 1 menas user is not created. 0 means user crated
 
   - name: say hello
     ansible.builtin.debug:
